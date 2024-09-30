@@ -11,7 +11,7 @@ public class ConsecutiveIdenticalLargest {
 
     public static void main(String[] args) {
         String wordWithRepeatingChar = "accddddd";
-        int counter = 0;
+        int counter = 1;
         int maxCounter = 0;
         if (wordWithRepeatingChar.length() == 1) {
             maxCounter = 1;

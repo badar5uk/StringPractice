@@ -10,26 +10,23 @@ public class ConsecutiveIdenticalLargest {
      */
 
     public static void main(String[] args) {
-        String wordWithRepeatingChar = "accccddddd";
+        String wordWithRepeatingChar = "accddddd";
         int counter = 0;
         int maxCounter = 0;
-        if(wordWithRepeatingChar.length() == 1){
+        if (wordWithRepeatingChar.length() == 1) {
             maxCounter = 1;
-        }
-        else{
-            for (int i = 0; i < wordWithRepeatingChar.length()-1; i++) {
-                    if (wordWithRepeatingChar.charAt(i) == wordWithRepeatingChar.charAt(i+1)) {
-                        counter++;
-                    }
-                    else if (counter > maxCounter) {
+        } else {
+            for (int i = 0; i < wordWithRepeatingChar.length() - 1; i++) {
+                if ((wordWithRepeatingChar.length() == 2) && (wordWithRepeatingChar.charAt(i) != wordWithRepeatingChar.charAt(i + 1))) {
+                    maxCounter = 1;
+                } else if ((wordWithRepeatingChar.length() == 3) && (wordWithRepeatingChar.charAt(i) != wordWithRepeatingChar.charAt(i + 1))) {
+                    maxCounter = 1;
+                } else if (wordWithRepeatingChar.charAt(i) == wordWithRepeatingChar.charAt(i + 1)) {
+                    counter = counter + 1;
+                    if (counter > maxCounter) {
                         maxCounter = counter;
-                        if (maxCounter > counter) {
-                            maxCounter = counter;
-                        }
-                    } else {
-                        counter = 1;
                     }
-
+                } else counter = 1;
             }
         }
         System.out.println(maxCounter);

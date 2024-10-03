@@ -17,13 +17,8 @@ public class withoutString {
         Scanner removeScanner = new Scanner(System.in);
         String removeUserInp = removeScanner.nextLine();
 
-        if(baseUSerInp.contains(removeUserInp)){
-            String resultWithRemovedSubstring = baseUSerInp.replace(removeUserInp,"");
-            System.out.println("Your string is "+baseUSerInp +" and your removed string is "+ resultWithRemovedSubstring);
+        String resultWithRemovedSubstring = baseUSerInp.replaceAll("(?i)"+removeUserInp,"");
+        System.out.println("Your string is "+baseUSerInp +" and your removed string is "+ resultWithRemovedSubstring);
         }
-        else{
-            System.out.println("The substring "+ removeUserInp+ " does not show up in the original string " + baseUSerInp);
-        }
-    }
 }
 

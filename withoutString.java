@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class withoutString {
+public class WithoutString {
     /*
     Input: A user String input and another substring input
     Output; the original string with al instances of the substring removed
